@@ -1,0 +1,14 @@
+{
+  "name": "component-search",
+  "version": "0.1.0",
+  "description": "Search distributors for electronic components from an informal description",
+  "main": "src/main.js",
+  "private": true,
+  "scripts": {
+    "start": "electron .",
+    "test": "node --test"
+  },
+  "devDependencies": {
+    "electron": "^44.7.2"
+  }
+}

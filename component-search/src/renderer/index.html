@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self'"
+    />
+    <title>Component Search</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="search-row">
+        <input
+          id="query"
+          type="text"
+          placeholder="e.g. 5K0 0805 1%  —  press Enter to search"
+          autofocus
+          spellcheck="false"
+        />
+        <button id="searchBtn" type="button">Search</button>
+      </div>
+
+      <div class="options">
+        <fieldset>
+          <legend>Distributors</legend>
+          <label><input type="checkbox" name="distributor" value="farnell" checked /> Farnell</label>
+        </fieldset>
+        <fieldset>
+          <legend>Filters</legend>
+          <label><input type="checkbox" id="inStock" /> In stock only</label>
+          <label title="Hide parts whose minimum order quantity is above 10 (e.g. full reels)"><input type="checkbox" id="smallVolume" checked /> Small volume (min qty ≤ 10)</label>
+        </fieldset>
+      </div>
+
+      <textarea id="results" readonly placeholder="Results appear here"></textarea>
+    </main>
+    <script src="renderer.js"></script>
+  </body>
+</html>
